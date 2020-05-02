@@ -1,26 +1,145 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
+<head>
     <meta charset="UTF-8">
     <title>BiliPay</title>
     <link rel="stylesheet" href="style.css" type="text/css">
-  </head>
+</head>
 
-  <body id="body">
+<body id="body">
     <h1>
-      BiliPay
+        BiliPay
     </h1>
-  <nav>
-      <ul>
-        <li><a href = "new.html">HOME</a></li>
-        <li><a href = "user.html">User</a></li>
-        <li><a href = "order.html">Order</a></li>
-        <li><a href = "commondity.html">Commondity</a></li>
-      </ul>
-  </nav>
+    <nav>
+        <ul>
+            <li><a href="new.html">HOME</a></li>
+            <li><a href="user.html">User</a></li>
+            <li><a href="order.html">Order</a></li>
+            <li><a href="commondity.html">Commondity</a></li>
+        </ul>
+    </nav>
 
-  </body>
-  
+
+
+
+
+
+    <!-- section -->
+    <aside class="filter-container">
+        <h2>Filters</h2>
+        <div class="filter-input-container">
+            <label for="filter-text">Text</label>
+            <div class="filter-input-element">
+                <input type="text" name="filter-text" id="filter-text" class="filter-input">
+            </div>
+        </div>
+        <div class="filter-input-container">
+            <label for="filter-min-price">Price</label>
+            <div class="filter-input-element">
+                <input type="text" name="filter-min-price" id="filter-min-price" class="filter-input" placeholder="min">
+            </div>
+            <div class="filter-input-element">
+                <input type="text" name="filter-max-price" id="filter-max-price" class="filter-input" placeholder="max">
+            </div>
+        </div>
+        <button id="filter-update-button" class="action-button">Search</button>
+    </aside>
+    <!-- Items -->
+    <section id="results">
+        <div class="result">
+            <div class="result-contents">
+                <div class="result-image-container">
+                    <img src="C:\Users\Elyon\Desktop\340\yacht.jpg" alt="Super yacht">
+                </div>
+                <div class="result-info-container">
+                    <a href="#" class="result-title">Super yacht</a> <span class="result-price">$58000</span>
+                    <dd> BY668 tank fishing boat </dd>
+                </div>
+                <button class="button">Order Now</button>
+            </div>
+        </div>
+
+        <div class="result">
+            <div class="result-contents">
+                <div class="result-image-container">
+                    <img src="https://dingyue.ws.126.net/UlcsyG0gdyg1eyJOrH2xtBRhAwvP5Wu3yR9drab8EWhpF1556261881695.jpg" alt="Villa">
+                </div>
+                <div class="result-info-container">
+                    <a href="#" class="result-title">Very large Villa</a> <span class="result-price">$450000</span>
+                    <dd> A large villa in the city </dd>
+                </div>
+                <button class="button">Order Now</button>
+            </div>
+        </div>
+
+        <div class="result">
+            <div class="result-contents">
+                <div class="result-image-container">
+                    <img src="https://5b0988e595225.cdn.sohucs.com/images/20170830/6693720d64bb417cba8b009af7249a12.jpeg" alt="The submarine">
+                </div>
+                <div class="result-info-container">
+                    <a href="#" class="result-title">The submarine</a> <span class="result-price">$5065000</span>
+                    <dd> Underwater entertainment </dd>
+                </div>
+                <button class="button">Order Now</button>
+            </div>
+        </div>
+
+        <div class="result">
+            <div class="result-contents">
+                <div class="result-image-container">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Delta-4H_DSP-23_2.jpg/1200px-Delta-4H_DSP-23_2.jpg" alt="Super rockets">
+                </div>
+                <div class="result-info-container">
+                    <a href="#" class="result-title">The ticket to Mars</a> <span class="result-price">$66850000</span>
+                    <dd> !The only ticket to Mars! (Hot!) </dd>
+                </div>
+                <button id="button">Sold out</button>
+            </div>
+        </div>
+
+        <div class="result">
+            <div class="result-contents">
+                <div class="result-image-container">
+                    <img src="https://n.sinaimg.cn/tech/transform/680/w400h280/20190523/ae52-hxhyiun6388179.jpg" alt="Moon">
+                </div>
+                <div class="result-info-container">
+                    <a href="#" class="result-title">Moon Trip</a> <span class="result-price">$3200500</span>
+                    <dd> One day trip to the moon </dd>
+                </div>
+                <button class="button">Order Now</button>
+            </div>
+        </div>
+
+        <div class="result">
+            <div class="result-contents">
+                <div class="result-image-container">
+                    <img src="https://www.sinaimg.cn/dy/slidenews/8_img/2012_09/198_60911_652989.jpg" alt="[Wholesale] New Warcraft">
+                </div>
+                <div class="result-info-container">
+                    <a href="#" class="result-title">[Wholesale] Warcraft</a> <span class="result-price">$20000000</span>
+                    <dd> Special! Half off for six planes!! </dd>
+                </div>
+                <button class="button">Order Now</button>
+            </div>
+        </div>
+
+        <div class="result">
+            <div class="result-contents">
+                <div class="result-image-container">
+                    <img src="https://p9.pstatp.com/large/pgc-image/33cb8ada73af4a2e8cda05cd01f751b4" alt="Very nice Mutton">
+                </div>
+                <div class="result-info-container">
+                    <a href="#" class="result-title">Mutton</a> <span class="result-price">$2</span>
+                    <dd>Think another eating it </dd>
+                </div>
+                <button class="button">Order Now</button>
+            </div>
+        </div>
+
+    </section>
+</body>
+
 
 </html>
