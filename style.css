@@ -176,3 +176,11 @@ ul {
   tr:nth-child(even) {
     background-color: #96ebc0;
   }
+
+  div.filter-input-container-user{
+    padding-top: 30px;
+  }
+
+  body{
+    background-image: url(3.jpg);
+  }

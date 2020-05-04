@@ -8,11 +8,8 @@
 </head>
 
 <body id="body">
-    <h1>
-        BiliPay
-    </h1>
-    <nav style="background-color: #ffffff;">
-        <h1>Welcome to </h1>
+
+    <nav>
         <a href="">
             <!--Logo Source: https://www.freelogodesign.org-->
             <img src="logo.png" width="200" height="200" alt="Bilipay Logo">
@@ -22,10 +19,21 @@
             <li><a href="index.html">HOME</a></li>
             <li><a href="user.html">User</a></li>
             <li><a href="order.html">Order</a></li>
+            <li><a href = "payMethod.html">Pay Method</a></li>
             <li><a href="commondity.html">Commondity</a></li>
         </ul>
     </nav>
+    
+        <div class="filter-input-container-user">
+            <label for="filter-text"></label>
+            <div class="filter-input-element">
+                <input type="text" name="filter-text" id="filter-text" class="filter-input">
+            </div>
+            <button id="filter-update-button" class="action-button">Search</button>
+        </div>
+  
 
+        <h1>User Detail</h1>
     <table>
         <tr>
             <th>ID</th>
