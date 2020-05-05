@@ -24,17 +24,13 @@
 
 </nav>
     
-<div class="filter-input-container-user">
-    <label for="filter-text"></label>
-    <div class="filter-input-element">
-        <input type="text" name="filter-text" id="filter-text" class="filter-input">
-    </div>
-    <button id="filter-update-button" class="action-button">Search</button>
+<div>
+    <input id = "input" type="text" onkeyup="Search()" placeholder="Search for user names...">
 </div>
 
 
 <h1>Pay Method</h1>
-<table>
+<table id = "pmtable">
 <tr>
     <th>ID</th>
     <th>Used by</th>
@@ -42,12 +38,39 @@
 </tr>
 <tr>
     <td>1</td>
-    <td>1, 2 </td>
+    <td>Josh Smith</td>
     <td>03-22-2024</td>
 </tr>
 <tr>
     <td>2</td>
-    <td>1</td>
+    <td>JoshSmith</td>
+    <td>01-15-2021</td>
+</tr>
+<tr>
+    <td>2</td>
+    <td>Eve Jackson</td>
     <td>01-15-2021</td>
 </tr>
 </table>
+
+<script>
+    function Search() {
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("input");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("pmtable");
+      tr = table.getElementsByTagName("tr");
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[1];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }       
+      }
+    }
+</script>
+    

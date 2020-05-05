@@ -24,17 +24,13 @@
         </ul>
     </nav>
     
-        <div class="filter-input-container-user">
-            <label for="filter-text"></label>
-            <div class="filter-input-element">
-                <input type="text" name="filter-text" id="filter-text" class="filter-input">
-            </div>
-            <button id="filter-update-button" class="action-button">Search</button>
-        </div>
-  
+
+    <div>
+        <input id = "input" type="text" onkeyup="Search()" placeholder="Search for user names...">
+    </div>  
 
         <h1>User Detail</h1>
-    <table>
+    <table id = "table">
         <tr>
             <th>ID</th>
             <th>First Name</th>
@@ -57,3 +53,24 @@
             <td>CA</td>
         </tr>
     </table>
+
+    <script>
+        function Search() {
+          var input, filter, table, tr, td, i, txtValue;
+          input = document.getElementById("input");
+          filter = input.value.toUpperCase();
+          table = document.getElementById("table");
+          tr = table.getElementsByTagName("tr");
+          for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[1];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+              } else {
+                tr[i].style.display = "none";
+              }
+            }       
+          }
+        }
+    </script>

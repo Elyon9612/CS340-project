@@ -23,7 +23,9 @@
             <li><a href="commondity.html">Commondity</a></li>
         </ul>
     </nav>
-
+    <div>
+        <input id = "input" type="number" min = "0" onkeyup="Search()" placeholder="Search for order ID...">
+    </div>  
     <div>
         <h1>Order Detail</h1>
         <table class="table">
@@ -38,7 +40,7 @@
                 </tr>
 
                 <tr>
-                    <td> 00001 </td>
+                    <td> 1 </td>
                     <td> 4568518 </td>
                     <td> 561-582-3654 </td>
                     <td> 123456 </td>
@@ -49,7 +51,24 @@
             </tbody>
         </table>
     </div>
-
+    <script>
+        function Search() {
+          var input, filter, table, tr, td, i, txtValue;
+          input = document.getElementById("input");
+          table = document.getElementById("table");
+          tr = table.getElementsByTagName("tr");
+          for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+              if (td == input) {
+                tr[i].style.display = "";
+              } else {
+                tr[i].style.display = "none";
+              }
+            }       
+          }
+        }
+    </script>
 
 </body>
 
