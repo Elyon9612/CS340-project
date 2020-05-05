@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>BiliPay</title>
+    <title>BiliPay-Commodity</title>
     <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 
@@ -19,7 +19,7 @@
             <li><a href="index.html">HOME</a></li>
             <li><a href="user.html">User</a></li>
             <li><a href="order.html">Order</a></li>
-            <li><a href = "payMethod.html">Pay Method</a></li>
+            <li><a href="payMethod.html">Pay Method</a></li>
             <li><a href="commondity.html">Commondity</a></li>
         </ul>
     </nav>
@@ -49,9 +49,10 @@
         </div>
         <button id="filter-update-button" class="action-button">Search</button>
     </aside>
+
     <!-- Items -->
     <section id="results">
-        <div class="result">
+        <div class="result" data-price="580000">
             <div class="result-contents">
                 <div class="result-image-container">
                     <img src="https://cdn.denisonyachtsales.com/images/featured-listings/1/25/73/7142573_20190813071258859_1_XLARGE.jpg" alt="Super yacht">
@@ -65,7 +66,7 @@
             </div>
         </div>
 
-        <div class="result">
+        <div class="result" data-price="450000">
             <div class="result-contents">
                 <div class="result-image-container">
                     <img src="https://dingyue.ws.126.net/UlcsyG0gdyg1eyJOrH2xtBRhAwvP5Wu3yR9drab8EWhpF1556261881695.jpg" alt="Villa">
@@ -79,7 +80,7 @@
             </div>
         </div>
 
-        <div class="result">
+        <div class="result" data-price="5065000">
             <div class="result-contents">
                 <div class="result-image-container">
                     <img src="https://5b0988e595225.cdn.sohucs.com/images/20170830/6693720d64bb417cba8b009af7249a12.jpeg" alt="The submarine">
@@ -93,7 +94,7 @@
             </div>
         </div>
 
-        <div class="result">
+        <div class="result" data-price="66850000">
             <div class="result-contents">
                 <div class="result-image-container">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Delta-4H_DSP-23_2.jpg/1200px-Delta-4H_DSP-23_2.jpg" alt="Super rockets">
@@ -107,7 +108,7 @@
             </div>
         </div>
 
-        <div class="result">
+        <div class="result" data-price="3200500">
             <div class="result-contents">
                 <div class="result-image-container">
                     <img src="https://n.sinaimg.cn/tech/transform/680/w400h280/20190523/ae52-hxhyiun6388179.jpg" alt="Moon">
@@ -121,7 +122,7 @@
             </div>
         </div>
 
-        <div class="result">
+        <div class="result" data-price="200000000">
             <div class="result-contents">
                 <div class="result-image-container">
                     <img src="https://www.sinaimg.cn/dy/slidenews/8_img/2012_09/198_60911_652989.jpg" alt="[Wholesale] New Warcraft">
@@ -135,7 +136,7 @@
             </div>
         </div>
 
-        <div class="result">
+        <div class="result" data-price="2">
             <div class="result-contents">
                 <div class="result-image-container">
                     <img src="https://p9.pstatp.com/large/pgc-image/33cb8ada73af4a2e8cda05cd01f751b4" alt="Very nice Mutton">
@@ -150,6 +151,62 @@
         </div>
 
     </section>
+
+
+
+
+
+
+
+
+
+    <button id="sell-something">Insert</button>
+    <div id="modal-backdrop" class="hidden"></div>
+    <div id="sell-something-modal" class="hidden">
+        <div class="modal-dialog">
+
+            <div class="modal-header">
+                <h3>Sell things on BiliPay Market</h3>
+                <button type="button" id="modal-close" class="modal-hide-button">&times;</button>
+            </div>
+
+            <div class="modal-body">
+
+                <div class="post-input-element">
+                    <label for="post-text-input">Name</label>
+                    <input type="text" id="post-text-input"></input>
+                </div>
+
+                <div class="post-input-element">
+                    <label for="post-text-input">ID</label>
+                    <input type="text" id="post-text-input"></input>
+                </div>
+
+                <div class="post-input-element">
+                    <label for="post-text-input">Description</label>
+                    <input type="text" id="post-text-input"></input>
+                </div>
+
+                <div class="post-input-element">
+                    <label for="post-photo-input">Photo URL</label>
+                    <input type="text" id="post-photo-input">
+                </div>
+
+                <div class="post-input-element">
+                    <label for="post-price-input">Selling price($)</label>
+                    <input type="number" id="post-price-input">
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" id="modal-cancel" class="modal-hide-button action-button">Cancel</button>
+                <button type="button" id="modal-accept" class="action-button">Create Post</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="index.js"></script>
 </body>
 
 

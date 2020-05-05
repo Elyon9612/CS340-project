@@ -28,7 +28,7 @@
 .filter-container {
     margin: 0;
     margin-top: 12px;
-    background-color: rgba(255, 255, 255, 0.842);
+    /* background-color: rgba(255, 255, 255, 0.842); */
     width: 170px;
     height: 430px;
     padding-left: 20px;
@@ -144,43 +144,162 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #333333;
-  }
-  
-  li {
+}
+
+li {
     float: left;
-  }
-  
-  li a {
+}
+
+li a {
     display: block;
     color: white;
     text-align: center;
     padding: 16px;
     text-decoration: none;
-  }
-  
-  li a:hover {
+}
+
+li a:hover {
     background-color: #111111;
-  }
-  table {
+}
+
+table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
-  }
-  
-  td, th {
-    border: 2px solid ;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
-  }
-  
-  tr:nth-child(even) {
+}
+
+tr:nth-child(even) {
     background-color: #96ebc0;
-  }
+}
 
-  div.filter-input-container-user{
+div.filter-input-container-user {
     padding-top: 30px;
-  }
+}
 
-  body{
+body {
     background-image: url(3.jpg);
-  }
+}
+
+
+/* --------------Commodity button part----------------------- */
+
+#sell-something {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    height: 80px;
+    width: 80px;
+    border: none;
+    border-radius: 40px;
+    font-size: 20px;
+    background-color: #e42e73;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.hidden {
+    display: none;
+}
+
+#modal-backdrop {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+#sell-something-modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1010;
+    overflow: scroll;
+}
+
+.modal-dialog {
+    width: auto;
+    max-width: 600px;
+    min-width: 350px;
+    min-height: 300px;
+    margin: 40px auto;
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+.modal-header {
+    position: relative;
+    padding: 10px 20px;
+}
+
+.modal-header h3 {
+    margin: 0;
+    font-size: 28px;
+}
+
+#modal-close {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 24px;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.post-input-element {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.post-input-element>label {
+    font-weight: 600;
+    flex: 1 75px;
+    margin-right: 10px;
+}
+
+.post-input-element input {
+    flex: 6 200px;
+    padding: 8px;
+    font-size: 20px;
+    border: 1px solid #aaa;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 10px 20px 10px;
+}
+
+#modal-cancel,
+#modal-accept {
+    margin-right: 20px;
+}
+
+#modal-cancel {
+    color: #333;
+    background-color: #fff;
+}
+
+#modal-cancel:hover {
+    background-color: #eee;
+}
