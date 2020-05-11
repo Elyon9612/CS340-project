@@ -29,6 +29,15 @@
         <input id = "input" type="text" onkeyup="Search()" placeholder="Search for user names...">
     </div>  
 
+    <div>
+        <label>Add a new user: </label>
+        <input id = "id" type = "number" placeholder="ID">
+        <input id = "fname" type = "text" placeholder="First Name">
+        <input id = "lname" type = "text" placeholder="Last Name">
+        <input id = "phone" type = "number" placeholder="Phone">
+        <button type="button" onclick = "addUser()">Submit</button>
+    </div>
+
         <h1>User Detail</h1>
     <table id = "table">
         <tr>
@@ -36,21 +45,18 @@
             <th>First Name</th>
             <th>Last Name</th>
             <th>Phone</th>
-            <th>State</th>
         </tr>
         <tr>
             <td>1</td>
             <td>Josh </td>
             <td>Smith</td>
             <td>0123456789</td>
-            <td>OR</td>
         </tr>
         <tr>
             <td>2</td>
             <td>Eve </td>
             <td>Jackson</td>
             <td>9876543210</td>
-            <td>CA</td>
         </tr>
     </table>
 
@@ -72,5 +78,26 @@
               }
             }       
           }
+        }
+
+        function addUser(){
+            var table = document.getElementById("table");
+
+            var row = table.insertRow(1);
+
+            var cell0 = row.insertCell(0);
+            var cell1 = row.insertCell(1);
+            var cell2 = row.insertCell(2);
+            var cell3 = row.insertCell(3);
+
+            var id = document.getElementById("id").value;
+            var fname = document.getElementById("fname").value;
+            var lname = document.getElementById("lname").value;
+            var phone = document.getElementById("phone").value;
+
+            cell0.innerHTML = id;
+            cell1.innerHTML = fname;
+            cell2.innerHTML = lname;
+            cell3.innerHTML = phone;
         }
     </script>
