@@ -50,6 +50,7 @@
                     <th> User Id </th>
                     <th> Card Number </th>
                     <th> Status </th>
+                    <th>Delete</th>
                 </tr>
 
                 <tr>
@@ -59,6 +60,7 @@
                     <td> 123456 </td>
                     <td> --***6548 </td>
                     <td> Pending... </td>
+                    <td><input type="button" value="Delete" onclick="deleteRow(this)"/></td>
                 </tr>
 
             </tbody>
@@ -93,6 +95,7 @@
             var cell3 = row.insertCell(3);
             var cell4 = row.insertCell(4);
             var cell5 = row.insertCell(5);
+            var cell6 = row.insertCell(6);
 
             var id = document.getElementById("id").value;
             var itemId = document.getElementById("itemId").value;
@@ -107,8 +110,14 @@
             cell3.innerHTML = userId;
             cell4.innerHTML = cardNumber;
             cell5.innerHTML = status;
-
+            cell6.innerHTML =("<input type=\"button\" value=\"Delete\" onclick=\"deleteRow(this)\"/>")
         }
+
+        function deleteRow(btn) {
+            var row = btn.parentNode.parentNode;
+             row.parentNode.removeChild(row);
+        }
+
     </script>
 
 

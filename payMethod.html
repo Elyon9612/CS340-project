@@ -43,21 +43,25 @@
     <th>ID</th>
     <th>Used by</th>
     <th>Exprie Date</th>
+    <th>Delete</th>
 </tr>
 <tr>
     <td>1</td>
     <td>Josh Smith</td>
     <td>2024-11-02</td>
+    <td><input type = "button" value = "Delete" onclick = "deleteRow(this)"/></td>
 </tr>
 <tr>
     <td>2</td>
     <td>JoshSmith</td>
     <td>2021-01-25</td>
+    <td><input type = "button" value = "Delete" onclick = "deleteRow(this)"/></td>
 </tr>
 <tr>
     <td>2</td>
     <td>Eve Jackson</td>
     <td>2021-01-25</td>
+    <td><input type = "button" value = "Delete" onclick = "deleteRow(this)"/></td>
 </tr>
 </table>
 
@@ -89,6 +93,7 @@
             var cell0 = row.insertCell(0);
             var cell1 = row.insertCell(1);
             var cell2 = row.insertCell(2);
+            var cell3 = row.insertCell(3);
 
             var id = document.getElementById("id").value;
             var name = document.getElementById("name").value;
@@ -97,7 +102,14 @@
             cell0.innerHTML = id;
             cell1.innerHTML = name;
             cell2.innerHTML = date;
+            cell3.innerHTML =("<input type=\"button\" value=\"Delete\" onclick=\"deleteRow(this)\"/>");
 
         }
+
+        function deleteRow(btn) {
+            var row = btn.parentNode.parentNode;
+             row.parentNode.removeChild(row);
+        }
+
 </script>
     
