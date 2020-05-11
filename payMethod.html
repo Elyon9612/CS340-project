@@ -28,6 +28,14 @@
     <input id = "input" type="text" onkeyup="Search()" placeholder="Search for user names...">
 </div>
 
+<div style = "padding-top: 10px;">
+  <label>Add a new user: </label>
+  <input id = "id" type = "number" placeholder="ID">
+  <input id = "name" type = "text" placeholder="User">
+  <input id = "date" type = "date" placeholder="Expire Date">
+  <button type="button" onclick = "addPayMethod()">Submit</button>
+</div>
+
 
 <h1>Pay Method</h1>
 <table id = "pmtable">
@@ -39,17 +47,17 @@
 <tr>
     <td>1</td>
     <td>Josh Smith</td>
-    <td>03-22-2024</td>
+    <td>2024-11-02</td>
 </tr>
 <tr>
     <td>2</td>
     <td>JoshSmith</td>
-    <td>01-15-2021</td>
+    <td>2021-01-25</td>
 </tr>
 <tr>
     <td>2</td>
     <td>Eve Jackson</td>
-    <td>01-15-2021</td>
+    <td>2021-01-25</td>
 </tr>
 </table>
 
@@ -72,5 +80,24 @@
         }       
       }
     }
+
+    function addPayMethod(){
+            var table = document.getElementById("pmtable");
+
+            var row = table.insertRow(1);
+
+            var cell0 = row.insertCell(0);
+            var cell1 = row.insertCell(1);
+            var cell2 = row.insertCell(2);
+
+            var id = document.getElementById("id").value;
+            var name = document.getElementById("name").value;
+            var date = document.getElementById("date").value;
+
+            cell0.innerHTML = id;
+            cell1.innerHTML = name;
+            cell2.innerHTML = date;
+
+        }
 </script>
     
