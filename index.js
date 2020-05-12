@@ -180,10 +180,3 @@ modalcancel.addEventListener('click', function sell(Event) {
     sellmodal.style.display = 'none';
     backdrop.style.display = 'none';
 })
-
-//Remove the items
-var deletebutton = document.getElementsByClassName('button');
-
-deletebutton.addEventListener('click', function listener(event) {
-    deletebutton.parentNode.remove(div);
-});
